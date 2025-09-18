@@ -1,4 +1,5 @@
 import { FcBusinessContact } from "react-icons/fc";
+import { ContactForm } from "./contact-form";
 
 const Contact = () => {
   return (
@@ -14,6 +15,7 @@ const Contact = () => {
         Vous avez un projet en tête ou souhaitez simplement discuter ?
         N&apos;hésitez pas à me contacter !
       </p>
+      <ContactForm />
     </div>
   );
 };
