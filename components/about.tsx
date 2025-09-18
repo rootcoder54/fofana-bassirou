@@ -8,7 +8,7 @@ const About = () => {
   const image =
     "https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
   return (
-    <div className="w-full px-4 md:px-12 py-8 md:py-14 flex items-center justify-between">
+    <div id="about" className="w-full px-4 md:px-12 py-8 md:py-14 flex items-center justify-between">
       <div className="flex flex-col items-start w-3xl">
         <div className="flex flex-col md:flex-row md:items-center justify-between w-full">
           <div className="w-2/3 flex flex-col items-start space-y-6">

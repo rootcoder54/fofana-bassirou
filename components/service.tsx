@@ -25,7 +25,7 @@ const Service = () => {
     }
   ];
   return (
-    <div className="w-full px-4 md:px-12 py-8 md:py-14 flex items-center justify-between">
+    <div id="services" className="w-full px-4 md:px-12 py-8 md:py-14 flex items-center justify-between">
       <div className="flex flex-col items-start space-y-10 w-3xl">
         <h2 className="text-3xl font-bold text-start flex flex-row items-center gap-4">
           <RiServiceLine className="size-12" /> Prestation de services
