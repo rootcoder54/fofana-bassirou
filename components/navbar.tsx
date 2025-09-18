@@ -26,14 +26,6 @@ const Navbar = () => {
         <NavigationMenuList className="hidden md:flex">
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
-              <Link href="#about" className="flex flex-row items-center gap-2">
-                <BadgeAlert />
-                A-propos
-              </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild>
               <Link
                 href="#competence"
                 className="flex flex-row items-center gap-2"
@@ -52,6 +44,14 @@ const Navbar = () => {
                 {" "}
                 <Server />
                 Services
+              </Link>
+            </NavigationMenuLink>
+          </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuLink asChild>
+              <Link href="#about" className="flex flex-row items-center gap-2">
+                <BadgeAlert />
+                A-propos
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>

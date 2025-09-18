@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
+import Skill from "@/components/skill";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <div className="bg-white dark:bg-zinc-800 flex-grow shadow-lg">
         <Navbar />
         <Hero />
+        <Skill />
       </div>
     </div>
   );
