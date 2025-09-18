@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/components/provider/theme-provider";
 
 const font = Outfit({
   subsets: ["latin"],
@@ -11,7 +12,7 @@ const font = Outfit({
 
 export const metadata: Metadata = {
   title: "FOFANA Bassirou",
-  description: "Portfolio de FOFANA Bassirou, développeur web et mobile",
+  description: "Portfolio de FOFANA Bassirou, développeur web et mobile"
 };
 
 export default function RootLayout({
@@ -20,8 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${font.className} bg-zinc-100 `}>{children}</body>
+    <html lang="fr" suppressHydrationWarning>
+      <body className={`${font.className} bg-zinc-100 dark:bg-zinc-950`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

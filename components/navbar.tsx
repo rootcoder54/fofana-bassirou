@@ -14,6 +14,7 @@ import {
 import { Button, buttonVariants } from "@/components/ui/button";
 import { BadgeAlert, FileSliders, Menu, Phone, Server } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Mode } from "./theme";
 
 const Navbar = () => {
   return (
@@ -119,6 +120,7 @@ const Navbar = () => {
             </PopoverContent>
           </Popover>
         </div>
+        <Mode />
       </NavigationMenu>
     </div>
   );

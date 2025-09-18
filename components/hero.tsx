@@ -4,8 +4,8 @@ const Hero = () => {
   return (
     <div className="w-full px-4 md:px-12 py-8 md:py-14 flex items-center justify-between">
       <div className="flex flex-col items-start space-y-10 w-3xl">
-        <div className="bg-zinc-800 rounded-full p-2 inline-block">
-          <User className="text-white" />
+        <div className="bg-zinc-800 dark:bg-zinc-200 rounded-full p-2 inline-block">
+          <User className="text-white dark:text-black" />
         </div>
         <h2 className="text-5xl font-bold text-start">
           Developpeur fullstack & fondateur d&apos;agence
