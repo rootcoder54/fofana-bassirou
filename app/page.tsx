@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
+import Service from "@/components/service";
 import Skill from "@/components/skill";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Skill />
+        <Service />
       </div>
     </div>
   );
