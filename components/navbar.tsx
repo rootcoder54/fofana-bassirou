@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   return (
-    <div className="w-full px-5 py-2 border-b top-0 bg-background/50 backdrop-blur-sm sticky z-50 flex items-center justify-between">
+    <div className="w-full px-5 py-2 mb-3 border-b top-0 bg-background/50 backdrop-blur-sm sticky z-50 flex items-center justify-between">
       <Link href={"/"} className="text-zinc-500 text-4xl">
         FB
       </Link>

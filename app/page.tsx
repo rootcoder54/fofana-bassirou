@@ -1,3 +1,4 @@
+import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen w-full lg:w-4xl xl:w-5xl mx-auto">
       <div className="bg-white flex-grow shadow-lg">
         <Navbar />
+        <Hero />
       </div>
     </div>
   );
