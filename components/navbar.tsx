@@ -19,7 +19,10 @@ import { Mode } from "./theme";
 const Navbar = () => {
   return (
     <div className="w-full px-5 py-2 mb-3 border-b top-0 bg-background/50 backdrop-blur-sm sticky z-50 flex items-center justify-between">
-      <Link href={"/"} className="text-zinc-500 dark:text-zinc-300 text-4xl font-bold">
+      <Link
+        href={"/"}
+        className="text-zinc-500 dark:text-zinc-300 text-4xl font-bold"
+      >
         FB
       </Link>
       <NavigationMenu viewport={false}>
@@ -76,7 +79,6 @@ const Navbar = () => {
             )}
           >
             <Phone />
-            Contact
           </Link>
           <Popover>
             <PopoverTrigger asChild>
