@@ -36,7 +36,7 @@ const Hero = () => {
           solutions numériques innovantes, je m&apos;efforce de transformer les
           idées en réalité.
         </p>
-        <div className="flex justify-center items-center relative w-full">
+        <div className="-my-4  flex justify-center items-center overflow-hidden w-full">
           {images.map((image, idx) => (
             <motion.div
               key={"images" + idx}
@@ -60,7 +60,7 @@ const Hero = () => {
                 alt="images"
                 width="500"
                 height="500"
-                className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
+                className="rounded-lg h-30 w-30 md:h-40 md:w-40 object-cover shrink-0"
               />
             </motion.div>
           ))}
