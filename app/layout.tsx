@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { siteConfig } from "@/config";
 
 const font = Outfit({
   subsets: ["latin"],
@@ -11,10 +12,7 @@ const font = Outfit({
   weight: ["400", "500", "600", "700"]
 });
 
-export const metadata: Metadata = {
-  title: "FOFANA Bassirou",
-  description: "Portfolio de FOFANA Bassirou, développeur web et mobile"
-};
+export const metadata: Metadata = siteConfig;
 
 export default function RootLayout({
   children
