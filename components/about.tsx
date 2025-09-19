@@ -11,7 +11,7 @@ const About = () => {
     <div id="about" className="w-full px-4 md:px-12 py-8 md:py-14 flex items-center justify-between">
       <div className="flex flex-col items-start w-3xl">
         <div className="flex flex-col md:flex-row md:items-center justify-between w-full">
-          <div className="w-2/3 flex flex-col items-start space-y-6">
+          <div className="md:w-2/3 flex flex-col items-start space-y-6">
             <div className="flex flex-col-reverse md:flex-row md:items-center justify-between w-full gap-4">
               <div className="space-y-3">
                 <FcAbout className="size-14" />
