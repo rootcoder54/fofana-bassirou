@@ -63,7 +63,7 @@ const Skill = () => {
           Voici un aperçu de mes compétences techniques et des technologies que
           j&apos;utilise pour créer des solutions numériques innovantes.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full px-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full px-5">
           {skills.map((skill, idx) => (
             <div
               key={"skill" + idx}
