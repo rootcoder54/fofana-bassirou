@@ -3,6 +3,7 @@ import { FcAbout } from "react-icons/fc";
 import { Button } from "./ui/button";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { FaFacebookSquare } from "react-icons/fa";
+import Link from "next/link";
 
 const About = () => {
   const image =
@@ -54,29 +55,35 @@ const About = () => {
               className="rounded-lg object-cover w-full shrink-0 rotate-[8deg] hover:rotate-0 transition-all hidden md:block"
             />
             <div className="flex flex-col items-start space-y-4 mt-2">
-              <Button
-                variant="ghost"
-                size={"lg"}
-                className="px-4 py-2 text-lg w-full justify-start dark:hover:bg-zinc-500/10"
-              >
-                <FaGithub className="size-6" /> Suivre sur Github
-              </Button>
-              <Button
-                variant="ghost"
-                size={"lg"}
-                className="px-4 py-2 text-lg w-full justify-start dark:hover:bg-zinc-500/10"
-              >
-                <FaFacebookSquare className="size-6 text-blue-500" /> Suivre sur
-                Facebook
-              </Button>
-              <Button
-                variant="ghost"
-                size={"lg"}
-                className="px-4 py-2 text-lg w-full justify-start dark:hover:bg-zinc-500/10"
-              >
-                <FaLinkedin className="size-6 text-blue-500" /> Suivre sur
-                Facebook
-              </Button>
+              <Link href="https://github.com/rootcoder54" target="_blank">
+                <Button
+                  variant="ghost"
+                  size={"lg"}
+                  className="px-4 py-2 text-lg w-full justify-start dark:hover:bg-zinc-500/10"
+                >
+                  <FaGithub className="size-6" /> Suivre sur Github
+                </Button>
+              </Link>
+              <Link href="https://facebook.com" target="_blank">
+                <Button
+                  variant="ghost"
+                  size={"lg"}
+                  className="px-4 py-2 text-lg w-full justify-start dark:hover:bg-zinc-500/10"
+                >
+                  <FaFacebookSquare className="size-6 text-blue-500" /> Suivre
+                  sur Facebook
+                </Button>
+              </Link>
+              <Link href="https://www.linkedin.com/in/bassirou-fofana-5186b71bb/" target="_blank">
+                <Button
+                  variant="ghost"
+                  size={"lg"}
+                  className="px-4 py-2 text-lg w-full justify-start dark:hover:bg-zinc-500/10"
+                >
+                  <FaLinkedin className="size-6 text-blue-500" /> Suivre sur
+                  LinkedIn
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

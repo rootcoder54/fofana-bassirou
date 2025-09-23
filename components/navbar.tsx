@@ -89,16 +89,6 @@ const Navbar = () => {
             <PopoverContent className="w-80">
               <div className="flex flex-col gap-1">
                 <Link
-                  href="#about"
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "flex flex-row justify-start gap-2"
-                  )}
-                >
-                  <BadgeAlert />
-                  A-propos
-                </Link>
-                <Link
                   href="#competence"
                   className={cn(
                     buttonVariants({ variant: "ghost" }),
@@ -117,6 +107,16 @@ const Navbar = () => {
                 >
                   <Server />
                   Services
+                </Link>
+                <Link
+                  href="#about"
+                  className={cn(
+                    buttonVariants({ variant: "ghost" }),
+                    "flex flex-row justify-start gap-2"
+                  )}
+                >
+                  <BadgeAlert />
+                  A-propos
                 </Link>
               </div>
             </PopoverContent>
