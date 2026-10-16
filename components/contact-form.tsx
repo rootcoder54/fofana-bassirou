@@ -15,17 +15,17 @@ export function ContactForm() {
   const [etat, setEtat] = useState(true);
 
   // Handler pour le formulaire
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setEtat(false);
-    fetch("/api/send", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ name, societe, text, toEmail })
-    }).then((response) => {
-      setEtat(true);
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, societe, text, toEmail }),
+      });
       if (response.ok) {
         toast.success("Email envoyé avec succès!");
         setName("");
@@ -35,28 +35,29 @@ export function ContactForm() {
       } else {
         toast.error("Erreur lors de l'envoi de l'email.");
       }
-    });
+    } catch {
+      toast.error("Connexion impossible. Réessayez dans un instant.");
+    } finally {
+      setEtat(true);
+    }
   };
 
   return (
-    <div className="space-y-4 max-w-full p-10 rounded-md shadow-2xl border">
+    <div className="contact-panel">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col items-start space-y-4"
       >
         <BiSolidMessageRoundedDots className="size-11" />
         <h2 className="text-2xl font-semibold">Discutons de votre projet</h2>
-        <span>
-          Plusieurs entreprises nous font confiance pour lancer leurs produits
-          web, mobiles et IA.
-        </span>
+        <span>Décrivez votre idée et les besoins de votre activité.</span>
 
         <div className="flex flex-col space-y-2 w-full">
           <label htmlFor="nom">Nom</label>
           <Input
             id="nom"
             type="text"
-            placeholder="nom complet"
+            placeholder="Votre nom complet"
             className="border-zinc-700"
             disabled={!etat}
             value={name}
@@ -83,7 +84,7 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col space-y-2 w-full">
-          <label htmlFor="sujet">Societé</label>
+          <label htmlFor="sujet">Société</label>
           <Input
             id="sujet"
             type="text"
@@ -102,7 +103,7 @@ export function ContactForm() {
           <label htmlFor="message">Message</label>
           <Textarea
             id="message"
-            placeholder="Information concernant votre projet ?"
+            placeholder="Votre projet, vos objectifs, les fonctionnalités souhaitées…"
             value={text}
             disabled={!etat}
             className="h-32 text-lg border-zinc-700"
@@ -120,7 +121,7 @@ export function ContactForm() {
             type="submit"
           >
             <SiMinutemailer className="size-8" />
-            <span className="text-lg">Envoyer</span>
+            <span className="text-lg">Envoyer mon message</span>
           </Button>
         ) : (
           <Button

@@ -1,19 +1,39 @@
-import { FaRegCopyright } from "react-icons/fa6";
-
-const Footer = () => {
+import { ArrowUpRight, Github, Linkedin } from "lucide-react";
+export default function Footer() {
   return (
-    <div className="w-full px-4 md:px-12 py-8 bg-background/50 backdrop-blur-sm border-t-2 flex items-center justify-between">
-      <div className="flex flex-row items-center justify-between w-full">
-        <div></div>
-        <div className="flex items-center gap-x-2">
-          <FaRegCopyright />{" "}
-          <span>
-            FOFANA BASSIROU - {new Date().getFullYear()} - Tous droits réservés.
-          </span>
+    <footer className="site-footer">
+      <div className="portfolio-container footer-inner">
+        <div>
+          <a href="#accueil" className="footer-brand">
+            Bassirou Fofana<span>.</span>
+          </a>
+          <p>Du web, du mobile et des idées qui prennent vie.</p>
+        </div>
+        <div className="footer-links">
+          <a
+            href="https://github.com/rootcoder54"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub de Bassirou Fofana"
+          >
+            <Github size={20} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/bassirou-fofana-5186b71bb/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn de Bassirou Fofana"
+          >
+            <Linkedin size={20} />
+          </a>
+          <a href="#accueil">
+            Retour en haut <ArrowUpRight size={17} />
+          </a>
         </div>
       </div>
-    </div>
+      <div className="portfolio-container copyright">
+        © {new Date().getFullYear()} Bassirou Fofana. Tous droits réservés.
+      </div>
+    </footer>
   );
-};
-
-export default Footer;
+}
