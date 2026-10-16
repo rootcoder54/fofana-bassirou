@@ -183,7 +183,7 @@ section[id] {
   display: flex;
   align-items: center;
   gap: 9px;
-  font-size: 11px;
+  font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.14em;
   line-height: 1.7;
@@ -215,7 +215,7 @@ h2 span {
 .section-heading > p {
   max-width: 375px;
   color: var(--subtle);
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.8;
 }
 .site-header {
@@ -248,7 +248,7 @@ h2 span {
   color: var(--green);
 }
 .brand-name {
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.35;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -258,7 +258,7 @@ h2 span {
 .desktop-nav {
   display: flex;
   gap: 28px;
-  font-size: 14px;
+  font-size: 17px;
 }
 .desktop-nav a:hover,
 .text-link:hover {
@@ -276,7 +276,7 @@ h2 span {
   border: 1px solid var(--line);
   border-radius: 30px;
   padding: 11px 19px;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
 }
 .nav-actions button {
@@ -309,7 +309,7 @@ h1 > span {
   color: var(--green);
 }
 .hero-intro {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.85;
   color: var(--subtle);
   max-width: 490px;
@@ -334,7 +334,7 @@ h1 > span {
   color: var(--page);
   padding: 17px 22px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 17px;
 }
 .action-button:hover {
   transform: translateY(-3px);
@@ -343,7 +343,7 @@ h1 > span {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
 }
 .hero-meta {
@@ -351,7 +351,7 @@ h1 > span {
   flex-wrap: wrap;
   gap: 18px;
   margin-top: 33px;
-  font-size: 11px;
+  font-size: 14px;
   color: var(--subtle);
 }
 .hero-meta span,
@@ -399,7 +399,7 @@ h1 > span {
   padding: 11px 14px;
   border: 1px solid #ffffff30;
   border-radius: 50px;
-  font-size: 11px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -412,7 +412,7 @@ h1 > span {
   color: #fff;
 }
 .visual-caption > span {
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   color: #d5edaa;
 }
@@ -447,7 +447,7 @@ h1 > span {
 }
 .floating-note span {
   display: block;
-  font-size: 11px;
+  font-size: 14px;
   margin-top: 5px;
 }
 .scroll-cue {
@@ -458,7 +458,7 @@ h1 > span {
   gap: 10px;
   text-transform: uppercase;
   letter-spacing: 0.13em;
-  font-size: 9px;
+  font-size: 12px;
   color: var(--subtle);
 }
 .service-grid {
@@ -507,7 +507,7 @@ h1 > span {
   padding: 28px;
 }
 .service-body .eyebrow {
-  font-size: 9px;
+  font-size: 12px;
 }
 .service-body h3 {
   font-size: 26px;
@@ -518,7 +518,7 @@ h1 > span {
 }
 .service-body p,
 .bespoke-banner p {
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.8;
   color: var(--subtle);
 }
@@ -532,7 +532,7 @@ h1 > span {
 .service-body li {
   display: flex;
   gap: 8px;
-  font-size: 12px;
+  font-size: 16px;
   align-items: center;
 }
 .service-body li svg {
@@ -544,7 +544,7 @@ h1 > span {
   padding-top: 19px;
   width: 100%;
   justify-content: space-between;
-  font-size: 12px;
+  font-size: 16px;
 }
 .bespoke-banner {
   margin-top: 24px;
@@ -596,7 +596,7 @@ h1 > span {
   letter-spacing: -0.02em;
 }
 .skill-group > p {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--subtle);
   line-height: 1.8;
   margin: 10px 0 25px;
@@ -613,7 +613,10 @@ h1 > span {
   border: 1px solid var(--line);
   border-radius: 7px;
   padding: 13px 10px;
-  font-size: 12px;
+  font-size: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 .tool svg {
   flex-shrink: 0;
@@ -623,7 +626,7 @@ h1 > span {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  font-size: 13px;
+  font-size: 16px;
   color: var(--subtle);
   margin-top: 30px;
 }
@@ -651,7 +654,7 @@ h1 > span {
   color: #fff;
 }
 .about-photo-note > span {
-  font-size: 10px;
+  font-size: 13px;
   letter-spacing: 0.17em;
   color: #d5edaa;
 }
@@ -668,10 +671,10 @@ h1 > span {
   bottom: 18px;
   left: 35px;
   color: #ffffffb0;
-  font-size: 9px;
+  font-size: 12px;
 }
 .about-copy > p {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.9;
   color: var(--subtle);
   margin-top: 23px;
@@ -685,7 +688,7 @@ h1 > span {
   display: flex;
   gap: 10px;
   align-items: start;
-  font-size: 13px;
+  font-size: 16px;
 }
 .about-values svg {
   flex-shrink: 0;
@@ -695,7 +698,7 @@ h1 > span {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 12px;
+  font-size: 16px;
   color: var(--subtle);
 }
 .social-row {
@@ -707,7 +710,7 @@ h1 > span {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+  font-size: 16px;
 }
 .process-section {
   background: #173c30;
@@ -736,7 +739,7 @@ h1 > span {
   color: #d5edaa;
 }
 .step-top span {
-  font-size: 12px;
+  font-size: 16px;
   letter-spacing: 0.1em;
   color: #b4cbb8;
 }
@@ -746,7 +749,7 @@ h1 > span {
   margin: 14px 0;
 }
 .process-grid p {
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.9;
   color: #c0cfc3;
 }
@@ -760,7 +763,7 @@ h1 > span {
   padding-top: 20px;
 }
 .contact-copy > p {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.85;
   color: var(--subtle);
   margin-top: 25px;
@@ -774,7 +777,7 @@ h1 > span {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 14px;
+  font-size: 17px;
 }
 .contact-reasons svg {
   color: var(--green);
@@ -790,15 +793,15 @@ h1 > span {
   height: 48px;
   background: var(--page);
   border-color: var(--line);
-  font-size: 15px;
+  font-size: 18px;
 }
 .contact-panel textarea {
   background: var(--page);
   border-color: var(--line);
-  font-size: 15px;
+  font-size: 18px;
 }
 .contact-panel label {
-  font-size: 13px;
+  font-size: 16px;
 }
 .contact-panel button[type="submit"] {
   height: 50px;
@@ -823,7 +826,7 @@ h1 > span {
   letter-spacing: -0.04em;
 }
 .footer-inner p {
-  font-size: 12px;
+  font-size: 16px;
   color: var(--subtle);
   margin-top: 8px;
 }
@@ -836,10 +839,10 @@ h1 > span {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 16px;
 }
 .copyright {
-  font-size: 10px;
+  font-size: 13px;
   color: var(--subtle);
   border-top: 1px solid var(--line);
   padding-top: 20px;
@@ -887,7 +890,7 @@ h1 > span {
   }
   .tool {
     padding: 12px 7px;
-    font-size: 11px;
+    font-size: 14px;
   }
   .about-grid,
   .contact-grid {
@@ -925,7 +928,7 @@ h1 > span {
     padding: 13px 4px;
     display: flex;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: 18px;
   }
   .section-space {
     padding-block: 65px;
@@ -963,7 +966,7 @@ h1 > span {
   .section-heading > p {
     max-width: 580px;
     margin-top: 23px;
-    font-size: 16px;
+    font-size: 18px;
   }
   .service-grid,
   .skills-grid {
@@ -980,13 +983,13 @@ h1 > span {
     font-size: 28px;
   }
   .service-body li {
-    font-size: 14px;
+    font-size: 17px;
   }
   .service-body > .text-link {
-    font-size: 14px;
+    font-size: 17px;
   }
   .service-body .eyebrow {
-    font-size: 10px;
+    font-size: 13px;
   }
   .bespoke-banner {
     align-items: start;
@@ -1000,13 +1003,13 @@ h1 > span {
     font-size: 19px;
   }
   .bespoke-banner p {
-    font-size: 14px;
+    font-size: 18px;
   }
   .skill-group {
     padding: 28px;
   }
   .tool {
-    font-size: 14px;
+    font-size: 17px;
     padding: 15px;
   }
   .tool-grid {
@@ -1018,7 +1021,7 @@ h1 > span {
     text-align: center;
   }
   .stack-note {
-    font-size: 12px;
+    font-size: 16px;
     text-align: center;
     align-items: start;
     line-height: 1.7;
@@ -1069,14 +1072,14 @@ h1 > span {
     padding: 10px 14px;
   }
   .hero-copy > .eyebrow {
-    font-size: 9px;
+    font-size: 12px;
     letter-spacing: 0.06em;
   }
   .hero-visual {
     min-height: 400px;
   }
   .hero-intro {
-    font-size: 17px;
+    font-size: 19px;
   }
   .floating-note {
     padding: 20px 14px;
@@ -1087,7 +1090,7 @@ h1 > span {
     font-size: 15px;
   }
   .floating-note span {
-    font-size: 9px;
+    font-size: 12px;
   }
   .visual-caption {
     left: 25px;
@@ -1100,7 +1103,7 @@ h1 > span {
   }
   .tool {
     flex-direction: row;
-    font-size: 13px;
+    font-size: 16px;
   }
   .process-grid {
     grid-template-columns: 1fr;
