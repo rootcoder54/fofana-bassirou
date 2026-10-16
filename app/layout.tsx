@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/provider/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { siteConfig } from "@/config";
 
-const font = Outfit({
-  subsets: ["latin"],
+const font = localFont({
+  src: "../public/fonts/outfit-latin.woff2",
   variable: "--font-geist-sans",
   display: "swap",
-  weight: ["400", "500", "600", "700"]
+  weight: "100 900"
 });
 
 export const metadata: Metadata = siteConfig;

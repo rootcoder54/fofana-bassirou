@@ -1,131 +1,69 @@
-import Link from "next/link";
-
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList
-} from "@/components/ui/navigation-menu";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger
-} from "@/components/ui/popover";
-import { Button, buttonVariants } from "@/components/ui/button";
-import { BadgeAlert, FileSliders, Menu, Phone, Server } from "lucide-react";
-import { cn } from "@/lib/utils";
+"use client";
+import { useState } from "react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { Mode } from "./theme";
-
-const Navbar = () => {
+const links = [
+  { href: "#services", label: "Services" },
+  { href: "#competence", label: "Expertises" },
+  { href: "#about", label: "À propos" },
+  { href: "#methode", label: "Méthode" },
+];
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
   return (
-    <div className="w-full px-5 py-2 mb-3 border-b top-0 bg-background/50 backdrop-blur-sm sticky z-50 flex items-center justify-between">
-      <Link
-        href={"/"}
-        className="text-zinc-500 dark:text-zinc-300 text-4xl font-bold"
-      >
-        FB
-      </Link>
-      <NavigationMenu viewport={false}>
-        <NavigationMenuList className="hidden md:flex">
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild>
-              <Link
-                href="#competence"
-                className="flex flex-row items-center gap-2"
-              >
-                <FileSliders />
-                Compétence
-              </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild>
-              <Link
-                href="#services"
-                className="flex flex-row items-center gap-2"
-              >
-                {" "}
-                <Server />
-                Services
-              </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild>
-              <Link href="#about" className="flex flex-row items-center gap-2">
-                <BadgeAlert />
-                A-propos
-              </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-          <NavigationMenuItem>
-            <NavigationMenuLink asChild>
-              <Link
-                href="#contact"
-                className="flex flex-row items-center gap-2"
-              >
-                <Phone />
-                Contact
-              </Link>
-            </NavigationMenuLink>
-          </NavigationMenuItem>
-        </NavigationMenuList>
-        <div className="md:hidden flex flex-row items-center gap-4">
-          <Link
-            href="#contact"
-            className={cn(
-              "flex flex-row items-center gap-2",
-              buttonVariants({ variant: "outline" })
-            )}
+    <header className="site-header">
+      <div className="portfolio-container nav-inner">
+        <a
+          href="#accueil"
+          className="brand"
+          aria-label="Bassirou Fofana, accueil"
+        >
+          <span className="brand-mark">
+            bf<span>.</span>
+          </span>
+          <span className="brand-name">
+            BASSIROU
+            <br />
+            FOFANA
+          </span>
+        </a>
+        <nav aria-label="Navigation principale" className="desktop-nav">
+          {links.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
+        </nav>
+        <div className="nav-actions">
+          <a className="nav-contact" href="#contact">
+            Un projet ? <ArrowUpRight size={17} />
+          </a>
+          <Mode />
+          <button
+            className="mobile-toggle"
+            onClick={() => setOpen(!open)}
+            aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+            aria-expanded={open}
+            aria-controls="mobile-nav"
           >
-            <Phone />
-          </Link>
-          <Popover>
-            <PopoverTrigger asChild>
-              <Button variant="outline">
-                <Menu />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-80">
-              <div className="flex flex-col gap-1">
-                <Link
-                  href="#competence"
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "flex flex-row justify-start gap-2"
-                  )}
-                >
-                  <FileSliders />
-                  Compétence
-                </Link>
-                <Link
-                  href="#services"
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "flex flex-row justify-start gap-2"
-                  )}
-                >
-                  <Server />
-                  Services
-                </Link>
-                <Link
-                  href="#about"
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "flex flex-row justify-start gap-2"
-                  )}
-                >
-                  <BadgeAlert />
-                  A-propos
-                </Link>
-              </div>
-            </PopoverContent>
-          </Popover>
+            {open ? <X /> : <Menu />}
+          </button>
         </div>
-        <Mode />
-      </NavigationMenu>
-    </div>
+      </div>
+      {open && (
+        <nav
+          id="mobile-nav"
+          className="mobile-nav"
+          aria-label="Navigation mobile"
+        >
+          {[...links, { href: "#contact", label: "Contact" }].map((link) => (
+            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+              {link.label}
+              <ArrowUpRight size={16} />
+            </a>
+          ))}
+        </nav>
+      )}
+    </header>
   );
-};
-
-export default Navbar;
+}

@@ -1,73 +1,86 @@
-"use client";
-import { User } from "lucide-react";
-import { motion } from "motion/react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import {
+  ArrowDown,
+  ArrowUpRight,
+  Braces,
+  Github,
+  MapPin,
+  Sparkles,
+} from "lucide-react";
 
-const Hero = () => {
-  const images = [
-    "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1618477388954-7852f32655ec?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1607799632518-da91dd151b38?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-  ];
-
-  // state pour stocker les rotations aléatoires
-  const [rotations, setRotations] = useState<number[]>([]);
-
-  useEffect(() => {
-    // généré une seule fois côté client
-    setRotations(images.map(() => Math.random() * 20 - 10));
-  }, []);
-
+export default function Hero() {
   return (
-    <div className="w-full px-4 md:px-12 py-8 md:py-14 flex items-center justify-between">
-      <div className="flex flex-col items-start space-y-10 w-3xl">
-        <div className="bg-zinc-800 dark:bg-zinc-200 rounded-full p-2 inline-block">
-          <User className="text-white dark:text-black" />
-        </div>
-        <h2 className="text-5xl font-bold text-start">
-          Developpeur fullstack & fondateur d&apos;agence
-        </h2>
-        <p className="text-zinc-600 dark:text-zinc-200 text-lg text-start">
-          Je suis Bassirou Fofana, un développeur de logiciels passionné et le
-          fondateur de ma propre agence. Avec une expertise en création de
-          solutions numériques innovantes, je m&apos;efforce de transformer les
-          idées en réalité.
+    <section id="accueil" className="portfolio-container hero-grid">
+      <div className="hero-copy">
+        <span className="eyebrow">
+          <span className="status-dot" /> Développeur indépendant · Fondateur
+          d’Agence One
+        </span>
+        <h1>
+          Vos idées.
+          <br />
+          Mon code.
+          <br />
+          <span>Du concret.</span>
+        </h1>
+        <p className="hero-intro">
+          Moi, c’est <strong>Bassirou Fofana.</strong> Je conçois des
+          expériences web, des applications mobiles et des solutions IA qui
+          simplifient le quotidien de votre entreprise.
         </p>
-        <div className="-my-4  flex justify-center items-center overflow-hidden w-full">
-          {images.map((image, idx) => (
-            <motion.div
-              key={"images" + idx}
-              style={{
-                rotate: rotations[idx] ?? 0
-              }}
-              whileHover={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 100
-              }}
-              whileTap={{
-                scale: 1.1,
-                rotate: 0,
-                zIndex: 100
-              }}
-              className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
-            >
-              <Image
-                src={image}
-                alt="images"
-                width="500"
-                height="500"
-                className="rounded-lg h-30 w-30 md:h-40 md:w-40 object-cover shrink-0"
-              />
-            </motion.div>
-          ))}
+        <div className="button-row">
+          <a className="action-button" href="#services">
+            Découvrir mon expertise <ArrowUpRight size={19} />
+          </a>
+          <a className="text-link" href="#contact">
+            Parlons de votre projet <ArrowUpRight size={18} />
+          </a>
+        </div>
+        <div className="hero-meta">
+          <span>
+            <MapPin size={16} /> Basé au Mali, ouvert sur le monde
+          </span>
+          <a
+            href="https://github.com/rootcoder54"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github size={16} /> Mon GitHub <ArrowUpRight size={14} />
+          </a>
         </div>
       </div>
-    </div>
+      <div className="hero-visual">
+        <div className="photo-label">
+          <span className="status-dot" /> De l’idée à la mise en ligne
+        </div>
+        <Image
+          src="https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?auto=format&fit=crop&w=1100&q=85"
+          alt="Espace de développement avec écrans et poste de travail"
+          fill
+          priority
+          sizes="(max-width: 800px) 100vw, 48vw"
+          className="hero-photo"
+        />
+        <div className="visual-caption">
+          <span>CRÉER. CONNECTER. SIMPLIFIER.</span>
+          <p>
+            La technologie au service
+            <br />
+            de vos ambitions.
+          </p>
+        </div>
+        <div className="floating-note">
+          <Braces size={30} />
+          <div>
+            <strong>Full-stack, de A à Z</strong>
+            <span>Design · Développement · Déploiement</span>
+          </div>
+          <Sparkles size={19} />
+        </div>
+      </div>
+      <a className="scroll-cue" href="#services">
+        <ArrowDown size={16} /> Explorer le portfolio
+      </a>
+    </section>
   );
-};
-
-export default Hero;
+}

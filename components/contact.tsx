@@ -1,23 +1,51 @@
-import { FcBusinessContact } from "react-icons/fc";
+import {
+  ArrowUpRight,
+  MessageSquare,
+  Lightbulb,
+  Handshake,
+} from "lucide-react";
 import { ContactForm } from "./contact-form";
-
-const Contact = () => {
+export default function Contact() {
   return (
-    <div
+    <section
       id="contact"
-      className="w-full px-4 md:px-12 py-8 md:py-14 flex flex-col items-center justify-center"
+      className="portfolio-container section-space contact-grid"
     >
-      <h2 className="text-3xl font-bold mb-4 flex flex-row items-center gap-2">
-        <FcBusinessContact className="size-12" />
-        Contactez-moi
-      </h2>
-      <p className="text-zinc-600 dark:text-zinc-200 text-lg text-center mb-6">
-        Vous avez un projet en tête ou souhaitez simplement discuter ?
-        N&apos;hésitez pas à me contacter !
-      </p>
+      <div className="contact-copy">
+        <span className="eyebrow">ET SI ON CONSTRUISAIT LA SUITE ?</span>
+        <h2>
+          Votre prochain
+          <br />
+          projet commence
+          <br />
+          <span>par un échange.</span>
+        </h2>
+        <p>
+          Une idée déjà précise ou un besoin à clarifier ? Présentez-moi votre
+          activité, vos objectifs et vos contraintes. Nous pourrons identifier
+          la meilleure façon d’avancer.
+        </p>
+        <div className="contact-reasons">
+          <span>
+            <Lightbulb size={21} /> Une idée à transformer en produit
+          </span>
+          <span>
+            <MessageSquare size={21} /> Un besoin technique à éclaircir
+          </span>
+          <span>
+            <Handshake size={21} /> Une collaboration à imaginer
+          </span>
+        </div>
+        <a
+          className="text-link"
+          href="https://www.linkedin.com/in/bassirou-fofana-5186b71bb/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Retrouvez-moi aussi sur LinkedIn <ArrowUpRight size={18} />
+        </a>
+      </div>
       <ContactForm />
-    </div>
+    </section>
   );
-};
-
-export default Contact;
+}

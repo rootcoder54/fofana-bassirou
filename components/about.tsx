@@ -1,95 +1,86 @@
 import Image from "next/image";
-import { FcAbout } from "react-icons/fc";
-import { Button } from "./ui/button";
-import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { FaFacebookSquare } from "react-icons/fa";
-import Link from "next/link";
-
-const About = () => {
-  const image =
-    "https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+import {
+  ArrowUpRight,
+  CheckCheck,
+  Github,
+  Linkedin,
+  MapPin,
+} from "lucide-react";
+export default function About() {
   return (
-    <div
+    <section
       id="about"
-      className="w-full px-4 md:px-12 py-8 md:py-14 flex items-center justify-between"
+      className="portfolio-container section-space about-grid"
     >
-      <div className="flex flex-col items-start w-3xl">
-        <div className="flex flex-col md:flex-row md:items-center justify-between w-full">
-          <div className="md:w-2/3 flex flex-col items-start space-y-6">
-            <div className="flex flex-col-reverse md:flex-row md:items-center justify-between w-full gap-4">
-              <div className="space-y-3">
-                <FcAbout className="size-14" />
-                <h2 className="text-3xl font-bold text-start">
-                  À propos de moi
-                </h2>
-              </div>
-            </div>
-            <p className="text-zinc-600 dark:text-zinc-200 text-lg text-start">
-              Je suis Bassirou <span className="font-bold">FOFANA</span>, un
-              développeur web et mobile passionné avec nouvelles opportunités et
-              défis. plus de 5 ans d&apos;expérience dans la création de
-              solutions numériques innovantes. J&apos;ai travaillé sur une
-              variété de projets, allant des applications mobiles aux
-              plateformes web complexes, en utilisant des technologies modernes
-              telles que React, Next.js, Node.js, et bien d&apos;autres.
-            </p>
-            <p className="text-zinc-600 dark:text-zinc-200 text-lg text-start">
-              En tant que fondateur de mon agence de développement, je
-              m&apos;engage à fournir des services de haute qualité qui
-              répondent aux besoins spécifiques de mes clients. Mon objectif est
-              de transformer vos idées en réalité grâce à des solutions
-              technologiques efficaces et performantes.
-            </p>
-            <p className="text-zinc-600 dark:text-zinc-200 text-lg text-start">
-              N&apos;hésitez pas à me contacter pour discuter de vos projets ou
-              pour toute collaboration potentielle. Je suis toujours ouvert à de
-              nouvelles opportunités et défis.
-            </p>
-          </div>
-          <div className="w-1/3 space-y-6">
-            <Image
-              src={image}
-              alt="photo de Bassirou FOFANA"
-              width="500"
-              height="500"
-              className="rounded-lg object-cover w-full shrink-0 rotate-[8deg] hover:rotate-0 transition-all hidden md:block"
-            />
-            <div className="flex flex-col items-start space-y-4 mt-2">
-              <Link href="https://github.com/rootcoder54" target="_blank">
-                <Button
-                  variant="ghost"
-                  size={"lg"}
-                  className="px-4 py-2 text-lg w-full justify-start dark:hover:bg-zinc-500/10"
-                >
-                  <FaGithub className="size-6" /> Suivre sur Github
-                </Button>
-              </Link>
-              <Link href="https://facebook.com" target="_blank">
-                <Button
-                  variant="ghost"
-                  size={"lg"}
-                  className="px-4 py-2 text-lg w-full justify-start dark:hover:bg-zinc-500/10"
-                >
-                  <FaFacebookSquare className="size-6 text-blue-500" /> Suivre
-                  sur Facebook
-                </Button>
-              </Link>
-              <Link href="https://www.linkedin.com/in/bassirou-fofana-5186b71bb/" target="_blank">
-                <Button
-                  variant="ghost"
-                  size={"lg"}
-                  className="px-4 py-2 text-lg w-full justify-start dark:hover:bg-zinc-500/10"
-                >
-                  <FaLinkedin className="size-6 text-blue-500" /> Suivre sur
-                  LinkedIn
-                </Button>
-              </Link>
-            </div>
-          </div>
+      <div className="about-visual">
+        <Image
+          src="https://images.unsplash.com/photo-1607799632518-da91dd151b38?auto=format&fit=crop&w=900&q=85"
+          alt="Écrans de développement dans un espace de travail, illustration de mon métier"
+          fill
+          sizes="(max-width: 800px) 100vw, 42vw"
+        />
+        <div className="about-photo-note">
+          <span>LE GOÛT DE CONSTRUIRE</span>
+          <strong>
+            Du code.
+            <br />
+            Et du sens.
+          </strong>
+        </div>
+        <span className="photo-credit">
+          Illustration · environnement de développement
+        </span>
+      </div>
+      <div className="about-copy">
+        <span className="eyebrow">LE DÉVELOPPEUR DERRIÈRE L’ÉCRAN</span>
+        <h2>
+          Bassirou Fofana.
+          <br />
+          <span>Enchanté.</span>
+        </h2>
+        <p>
+          Développeur full-stack et fondateur d’Agence One, j’accompagne les
+          entrepreneurs et les entreprises dans la création de leurs outils
+          numériques.
+        </p>
+        <p>
+          Ce qui m’intéresse : comprendre votre métier, résoudre un problème
+          concret et concevoir une solution que vous aurez plaisir à utiliser.
+          Mon travail relie le web, le mobile et l’intelligence artificielle
+          pour rendre vos idées opérationnelles.
+        </p>
+        <div className="about-values">
+          <span>
+            <CheckCheck size={19} /> Un interlocuteur de la conception au
+            déploiement
+          </span>
+          <span>
+            <CheckCheck size={19} /> Des échanges clairs et des étapes visibles
+          </span>
+          <span>
+            <CheckCheck size={19} /> Du code maintenable, pensé pour évoluer
+          </span>
+        </div>
+        <span className="location">
+          <MapPin size={17} /> Mali · Collaboration à distance
+        </span>
+        <div className="social-row">
+          <a
+            href="https://github.com/rootcoder54"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github size={19} /> GitHub <ArrowUpRight size={15} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/bassirou-fofana-5186b71bb/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin size={19} /> LinkedIn <ArrowUpRight size={15} />
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default About;
+}
